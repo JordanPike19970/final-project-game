@@ -38,5 +38,9 @@ public class TimerCountdown : MonoBehaviour
             textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;
         }
         takingAway = false;
+        if(secondsLeft <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }
